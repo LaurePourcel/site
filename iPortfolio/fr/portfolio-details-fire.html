@@ -46,14 +46,10 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Alex Smith</a></h1>
+        <img src="assets/img/profile.jpg" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Laure Pourcel</a></h1>
         <div class="social-links mt-3 text-center">
-          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://www.linkedin.com/in/laure-pourcel-094a98211/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
         </div>
       </div>
 
@@ -63,7 +59,6 @@
           <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
           <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
           <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
           <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
@@ -89,33 +84,62 @@
 
     <!-- ======= Portfolio Details Section ======= -->
 
-          <div class="col-lg-4">
-            <div class="portfolio-info">
-              <h3>Information générale</h3>
-              <ul>
-                <li><strong>Catégorie</strong>: Data Science</li>
-                <li><strong>Titre</strong>: Détection de point d'ignition</li>
-                <li><strong>Project date</strong>: Décembre 2023</li>
-                <li><strong>Project URL</strong>: <a href="#">https://github.com/LaurePourcel/descartes-data-sci</a></li>
-              </ul>
-            </div>
-            <div class="portfolio-description">
-              <h2>Projet détaillé</h2>
-              <p>
-                Projet de Data Science mené en plusieurs étapes : 
-                <li> Analyse exhaustive des données, répartitions, contributions relatives à la classification de notre cible.</li>
-                <li> Nettoyage des données aberrantes ou incohérentes.</li>
-                <li> Normalisation des valeurs en vue de la classification.</li>
-                <li> Classification avec des algorithmes pertinents dans le cadre de notre étude (Random Forest, xgboost).</li>
-                <li> Recherche d'hyperparamètres pour les algorithmes considérés.</li>
-                La mesure pertinente sur ce projet est le recall, on obtient 97% de prédiction de départ de feu correcte. 
-              </p>
-            </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="portfolio-info">
+            <h3>Information générale</h3>
+            <ul>
+              <li><strong>Catégorie</strong>: Data Science</li>
+              <li><strong>Titre</strong>: Classification de points d'ignitions</li>
+              <li><strong>Stack technique</strong>: Python (numpy, xarray, pandas, tensorflow, seaborn), Git</li>
+              <li><strong>Project date</strong>: Décembre 2023</li>
+              <li><strong>Project URL</strong>: <a href="#">https://github.com/LaurePourcel/descartes-data-sci</a></li>
+            </ul>
           </div>
 
-        </div>
+          <div class="portfolio-description">
+            <h2>Contexte</h2>
+            <p>
+              Avec X départs de feux annuels en Australie, causant chaque année
+              des dégâts records et un impact important sur la biodiversité de l'île, la prédiction 
+              de départ de feu est un défi que le pays se doit de relever. 
+            </p>
+            <p>
+              Le jeu de données mis à notre disposition pour cette étude est composé de 
+              2200 entrées. Chacune correspond à une coordonnée où a été observé ou non un 
+              départ de feu. On y retrouve 42 attributs comme la distance de cette coordonnée 
+              à la rivière la plus proche, la température moyenne de la journée ou le type de terrain. 
+            </p>
+            <p>
+              Notre étude s'est séparée en 3 parties, l'analyse du jeu de données, le prétraitement en 
+              fonction de ce que l'étude des données a révélé puis la classification avec les algorithmes de 
+              Machine Learning appropriés. 
+            </p>
+          </div>
 
+          <div class="portfolio-description">
+            <h2>Projet détaillé</h2>
+            <p>
+              Projet de Data Science mené en plusieurs étapes :
+              <ul>
+                <li> Analyse des données : pour chaque attribut observer sa distribution, présence d'asymétrie positive ou négative, répartition normale. Mise en cohérence 
+                  de la répartititon obtenue avec celle attendue.
+                  Analyse de la corrélation relative de l'attribut avec la cible que l'on souhaite classifier pour déterminer s'il est pertinent de le garder 
+                  dans la suite de notre étude.</li>
+                <li> Prétraitement : nettoyage des données aberrantes quand remise en contexte, pourcentage négatif, erreur de typing, ou incohérentes
+                  , changement d'unité au sein d'un même attribut. Regroupement des classes colinéaires. Normalisation des valeurs en vue de la classification. </li>
+                <li> Traitement avec des algorithmes de classification, première approche avec Random Forest puis un algorithme xgboost. Recherche des 
+                  hyperparamètres pour optimiser les algorithmes.</li>
+              </ul>
+              La mesure pertinente sur ce projet est le recall, puisque l'on ne souhaite mal classifier aucun départ de feu réel 
+              tandis qu'il est moins grave d'obtenir des faux positifs. On obtient 97% de prédictions de départ de feu correctes.
+            </p>
+          </div>
+        </div>
       </div>
+    </div>
+    
     </section><!-- End Portfolio Details Section -->
 
   </main><!-- End #main -->
